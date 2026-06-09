@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Prachi Bagasi — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- NAV — words only, no hamburger/side panel -->
+  <nav>
+    <div class="nav-logo">Prachi Bagasi Portfolio</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO: photo LEFT, text RIGHT -->
+  <section id="hero">
+    <div class="hero-photo">
+      <div class="frame">
+        <!-- Replace with: <img src="Profile_Picture.png" alt="Prachi Bagasi"> -->
+        <img src="Profile_Picture.png" alt="Prachi Bagasi">
+
+        <!-- Skill bubbles that pop up on photo hover -->
+        <div class="skill-bubbles">
+          <span class="sb">🐍 Python</span>
+          <span class="sb">👁️ OpenCV</span>
+          <span class="sb">🗺️ GIS</span>
+          <span class="sb">🌐 HTML/CSS</span>
+          <span class="sb">⚡ JavaScript</span>
+          <span class="sb">🗄️ SQL</span>
+          <span class="sb">🤖 ML</span>
+          <span class="sb">💾 C</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <div class="hero-eyebrow">Open to opportunities · B.Tech CSE 2026</div>
+      <h1>Hi, I'm<br><span>Prachi Bagasi</span></h1>
+      <p>Python developer, data enthusiast & web builder — turning ideas into working software. Experienced in GIS automation, ML research, and full-stack web development.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT — no experience cards, just bio text -->
+  <section id="about">
+    <div class="reveal">
+      <div class="section-label">Who I am</div>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-text reveal" style="max-width:680px;">
+      <p>I'm a final-year Computer Science student with a curiosity for problems where code meets the real world. From processing satellite map sheets with computer vision to building database systems — I like work that has tangible output.</p>
+      <p>I enjoy picking up new tools quickly and applying them to practical challenges. Whether it's Python scripting, geospatial data pipelines, or front-end interfaces, I try to bring both care and efficiency to what I build.</p>
+      <p>Outside coursework and projects, I'm always exploring new datasets, reading about ML, and looking for the next thing that makes me think differently about software.</p>
+    </div>
+  </section>
+
+  <!-- EDUCATION — own section -->
+  <section id="education">
+    <div class="reveal">
+      <div class="section-label">Academic background</div>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div>
+          <div class="edu-degree">Bachelor of Technology — Computer Science</div>
+          <div class="edu-school">Women Institute of Technology · Uttarakhand Technical University</div>
+        </div>
+        <div class="edu-year">2022 – 2026</div>
+      </div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-degree">High School — Science (PCM + CS)</div>
+          <div class="edu-school">Jaswant Modern Sr. Sec. School</div>
+        </div>
+        <div class="edu-year">Graduated 2022</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="reveal">
+      <div class="section-label">What I work with</div>
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-chip"><span class="si">🐍</span> Python</div>
+      <div class="skill-chip"><span class="si">👁️</span> OpenCV</div>
+      <div class="skill-chip"><span class="si">🗄️</span> SQL</div>
+      <div class="skill-chip"><span class="si">🌐</span> HTML</div>
+      <div class="skill-chip"><span class="si">🎨</span> CSS</div>
+      <div class="skill-chip"><span class="si">⚡</span> JavaScript</div>
+      <div class="skill-chip"><span class="si">🗺️</span> GDAL / GIS</div>
+      <div class="skill-chip"><span class="si">🤖</span> Machine Learning</div>
+      <div class="skill-chip"><span class="si">💾</span> C</div>
+      <div class="skill-chip"><span class="si">📊</span> Data Analysis</div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE — timeline with accordion expand -->
+  <section id="experience">
+    <div class="reveal">
+      <div class="section-label">Where I've worked</div>
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="timeline reveal">
+
+      <!-- Survey of India -->
+      <div class="exp-item" id="exp-0">
+        <div class="exp-header" onclick="toggleExp(0)">
+          <div class="exp-header-left">
+            <div class="exp-org">Survey of India</div>
+            <div class="exp-role">Summer Trainee</div>
+          </div>
+          <div class="exp-header-right">
+            <div class="exp-date">Jun 2025 – Jul 2025</div>
+            <div class="exp-toggle">▼</div>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-body-content">
+              <ul class="exp-bullets">
+                <li>Automated georeferencing of large scanned map collections to produce GIS-ready spatial data.</li>
+                <li>Built Python scripts using OpenCV and GDAL to extract map coordinates and run batch spatial transformations.</li>
+                <li>Reduced manual processing time significantly and improved spatial data accuracy for downstream GIS workflows.</li>
+              </ul>
+              <div class="exp-skills">
+                <span class="exp-pill">Python</span>
+                <span class="exp-pill">OpenCV</span>
+                <span class="exp-pill">GDAL</span>
+                <span class="exp-pill">GIS</span>
+                <span class="exp-pill">Computer Vision</span>
+                <span class="exp-pill">Automation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DRDO -->
+      <div class="exp-item" id="exp-1">
+        <div class="exp-header" onclick="toggleExp(1)">
+          <div class="exp-header-left">
+            <div class="exp-org">DRDO – DEAL</div>
+            <div class="exp-role">Summer Research Trainee</div>
+          </div>
+          <div class="exp-header-right">
+            <div class="exp-date">Jun 2024 – Aug 2024</div>
+            <div class="exp-toggle">▼</div>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <div class="exp-body-content">
+              <ul class="exp-bullets">
+                <li>Researched adaptive beamforming in wireless communication, applying ML and reinforcement learning to antenna control.</li>
+                <li>Studied real-time adaptive algorithms for antenna arrays and communication system applications.</li>
+                <li>Collaborated with senior researchers on theoretical models and practical ML integration strategies.</li>
+              </ul>
+              <div class="exp-skills">
+                <span class="exp-pill">Python</span>
+                <span class="exp-pill">Machine Learning</span>
+                <span class="exp-pill">Reinforcement Learning</span>
+                <span class="exp-pill">Signal Processing</span>
+                <span class="exp-pill">Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="section-label">What I've built</div>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-icon">🗺️</div>
+        <div class="project-name">Automated Georeferencing</div>
+        <div class="project-desc">Python pipeline using OpenCV and GDAL to automate coordinate extraction and batch spatial transformations of scanned map sheets — improving accuracy and cutting manual effort.</div>
+        <div class="project-stack">
+          <span class="stack-pill">Python</span><span class="stack-pill">OpenCV</span>
+          <span class="stack-pill">GDAL</span><span class="stack-pill">GIS</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-icon">📚</div>
+        <div class="project-name">Library Management System</div>
+        <div class="project-desc">Database-driven system to handle book inventories, borrowing records, and user management — built with Python and SQL.</div>
+        <div class="project-stack">
+          <span class="stack-pill">Python</span><span class="stack-pill">SQL</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-icon">💼</div>
+        <div class="project-name">Portfolio Website</div>
+        <div class="project-desc">This site — designed and built from scratch in HTML, CSS, and JavaScript with smooth animations and a responsive layout.</div>
+        <div class="project-stack">
+          <span class="stack-pill">HTML</span><span class="stack-pill">CSS</span>
+          <span class="stack-pill">JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="reveal">
+      <div class="section-label">Learning never stops</div>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <div class="cert-grid reveal">
+      <div class="cert-card">
+        <div class="cert-icon">🐍</div>
+        <div>
+          <div class="cert-name">Python Programming</div>
+          <div class="cert-issuer">Internshala</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📊</div>
+        <div>
+          <div class="cert-name">Data Analytics & Visualization</div>
+          <div class="cert-issuer">Accenture North America</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT — logo icons only, no send button -->
+  <section id="contact">
+    <div class="reveal">
+      <div class="section-label">Say hello</div>
+      <h2 class="section-title">Get in Touch</h2>
+    </div>
+    <div class="contact-inner reveal">
+      <p>I'm open to internships, collaborations, and entry-level roles in software development, data, or GIS. Click an icon to reach me directly.</p>
+      <div class="social-row">
+
+        <!-- Email -->
+        <a class="social-btn" href="mailto:prachibagasi@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="social-btn" href="https://www.linkedin.com/in/prachi-bagasi-318bb026a" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a class="social-btn" href="https://github.com/Prachibagasi" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>😺 Made by Prachi Bagasi · Built with HTML, CSS & JS</p>
+  </footer>
+
+</body>
+</html>
