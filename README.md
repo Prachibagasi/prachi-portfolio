@@ -10,7 +10,7 @@
 
 A fully responsive personal portfolio showcasing my skills, experience, and projects as a final-year B.Tech CSE student. Built entirely from scratch — no frameworks, no libraries, no build tools. Just clean, hand-written HTML, CSS, and vanilla JavaScript.
 
-> **Deployed at:** [https://prachi-bagasi.netlify.app/] (Prachi_Bagasi_portfolio)
+> **Deployed at:** [https://prachi-bagasi.netlify.app/] 
 ---
 
 ## ✨ Features
@@ -32,9 +32,9 @@ A fully responsive personal portfolio showcasing my skills, experience, and proj
 ```
 portfolio/
 │
-├── index.html            # Complete single-page site — all sections
-├── style.css             # All styles with CSS custom property theme tokens
-├── Profile_Picture.png   # Profile photo (not tracked in git — add your own)
+├── index.html            
+├── style.css             
+├── Profile_Picture.png   
 ├── .gitignore
 └── README.md
 ```
